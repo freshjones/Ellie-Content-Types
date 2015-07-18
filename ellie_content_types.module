@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Ellie Content Types feature.
+ */
+
+include_once 'ellie_content_types.features.inc';
