@@ -25,6 +25,13 @@ function ellie_content_types_eck_bundle_info() {
       'label' => 'Text Block',
       'config' => array(),
     ),
+    'content_sections_section' => array(
+      'machine_name' => 'content_sections_section',
+      'entity_type' => 'content_sections',
+      'name' => 'section',
+      'label' => 'Section',
+      'config' => array(),
+    ),
   );
   return $items;
 }
@@ -37,6 +44,11 @@ function ellie_content_types_eck_entity_type_info() {
     'content_elements' => array(
       'name' => 'content_elements',
       'label' => 'Content Elements',
+      'properties' => array(),
+    ),
+    'content_sections' => array(
+      'name' => 'content_sections',
+      'label' => 'Content Sections',
       'properties' => array(),
     ),
   );
