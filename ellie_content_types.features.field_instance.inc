@@ -22,7 +22,7 @@ function ellie_content_types_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => TRUE,
+          'links' => 0,
           'view_mode' => 'default',
         ),
         'type' => 'entityreference_entity_view',
@@ -63,7 +63,7 @@ function ellie_content_types_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -97,8 +97,8 @@ function ellie_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-pages-field_content'
-  $field_instances['node-pages-field_content'] = array(
+  // Exported field_instance: 'node-pages-field_content_element_ref'
+  $field_instances['node-pages-field_content_element_ref'] = array(
     'bundle' => 'pages',
     'default_value' => NULL,
     'deleted' => 0,
@@ -108,7 +108,7 @@ function ellie_content_types_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => TRUE,
+          'links' => 1,
           'view_mode' => 'default',
         ),
         'type' => 'entityreference_entity_view',
@@ -122,8 +122,8 @@ function ellie_content_types_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_content',
-    'label' => 'Content',
+    'field_name' => 'field_content_element_ref',
+    'label' => 'Content Element',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -144,7 +144,6 @@ function ellie_content_types_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Content');
   t('Content Element');
 
   return $field_instances;
