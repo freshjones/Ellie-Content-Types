@@ -21,6 +21,13 @@ function ellie_content_types_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function ellie_content_types_eck_bundle_info() {
   $items = array(
+    'content_elements_image_block' => array(
+      'machine_name' => 'content_elements_image_block',
+      'entity_type' => 'content_elements',
+      'name' => 'image_block',
+      'label' => 'Image Block',
+      'config' => array(),
+    ),
     'content_elements_section_block' => array(
       'machine_name' => 'content_elements_section_block',
       'entity_type' => 'content_elements',

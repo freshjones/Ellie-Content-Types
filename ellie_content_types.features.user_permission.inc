@@ -20,13 +20,6 @@ function ellie_content_types_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'ds_switch pages'.
-  $permissions['ds_switch pages'] = array(
-    'name' => 'ds_switch pages',
-    'roles' => array(),
-    'module' => 'ds_extras',
-  );
-
   // Exported permission: 'eck view entities'.
   $permissions['eck view entities'] = array(
     'name' => 'eck view entities',
