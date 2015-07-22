@@ -87,7 +87,9 @@ function ellie_content_types_field_default_field_bases() {
         'sort' => array(
           'type' => 'none',
         ),
-        'target_bundles' => array(),
+        'target_bundles' => array(
+          'text_block' => 'text_block',
+        ),
       ),
       'target_type' => 'content_elements',
     ),

@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function ellie_content_types_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -18,18 +21,18 @@ function ellie_content_types_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function ellie_content_types_eck_bundle_info() {
   $items = array(
+    'content_elements_section_block' => array(
+      'machine_name' => 'content_elements_section_block',
+      'entity_type' => 'content_elements',
+      'name' => 'section_block',
+      'label' => 'Section Block',
+      'config' => array(),
+    ),
     'content_elements_text_block' => array(
       'machine_name' => 'content_elements_text_block',
       'entity_type' => 'content_elements',
       'name' => 'text_block',
       'label' => 'Text Block',
-      'config' => array(),
-    ),
-    'content_sections_section' => array(
-      'machine_name' => 'content_sections_section',
-      'entity_type' => 'content_sections',
-      'name' => 'section',
-      'label' => 'Section',
       'config' => array(),
     ),
   );
@@ -44,11 +47,6 @@ function ellie_content_types_eck_entity_type_info() {
     'content_elements' => array(
       'name' => 'content_elements',
       'label' => 'Content Elements',
-      'properties' => array(),
-    ),
-    'content_sections' => array(
-      'name' => 'content_sections',
-      'label' => 'Content Sections',
       'properties' => array(),
     ),
   );

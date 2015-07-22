@@ -10,6 +10,51 @@
 function ellie_content_types_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'content_elements-section_block-field_content_element_ref'
+  $field_instances['content_elements-section_block-field_content_element_ref'] = array(
+    'bundle' => 'section_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => TRUE,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'content_elements',
+    'field_name' => 'field_content_element_ref',
+    'label' => 'Content Element',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'content_elements-text_block-field_body'
   $field_instances['content_elements-text_block-field_body'] = array(
     'bundle' => 'text_block',
@@ -52,50 +97,6 @@ function ellie_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'content_sections-section-field_content_element_ref'
-  $field_instances['content_sections-section-field_content_element_ref'] = array(
-    'bundle' => 'section',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'content_sections',
-    'field_name' => 'field_content_element_ref',
-    'label' => 'Content Element',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 31,
-    ),
-  );
-
   // Exported field_instance: 'node-pages-field_content'
   $field_instances['node-pages-field_content'] = array(
     'bundle' => 'pages',
@@ -104,12 +105,13 @@ function ellie_content_types_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'links' => TRUE,
+          'view_mode' => 'default',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 1,
       ),
       'teaser' => array(
