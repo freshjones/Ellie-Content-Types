@@ -114,10 +114,19 @@ function ellie_content_types_field_default_field_instances() {
         'type' => 'entityreference_entity_view',
         'weight' => 1,
       ),
-      'teaser' => array(
-        'label' => 'above',
+      'full' => array(
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 0,
       ),
     ),
